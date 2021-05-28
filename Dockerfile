@@ -1,10 +1,8 @@
-FROM ruby:2.6.6
-
+FROM ruby:2.7.3-slim
 
 WORKDIR /app
 
 RUN gem install bundler
-
 COPY Gemfile* ./
 
 RUN bundle install

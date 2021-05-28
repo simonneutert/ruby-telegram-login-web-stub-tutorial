@@ -5,7 +5,7 @@ at https://core.telegram.org/widgets/login _(at least skim it!)_
 
 ## Requirements
 
-* Ruby >= 2.6
+* Ruby >= 2.7
 * Docker
 * Ngrok
 

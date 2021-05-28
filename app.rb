@@ -5,7 +5,6 @@ Bundler.require(:default)
 require 'dotenv/load'
 
 class App < Roda
-
   plugin :render
   plugin :head
 
