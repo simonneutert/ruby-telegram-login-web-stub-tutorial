@@ -1,44 +1,51 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default)
 
 require 'dotenv/load'
+require 'digest'
+require 'openssl'
+
+BOT_KEY = ENV.delete('TELEGRAMBOTSECRETKEY')
+
+require_relative 'lib/auth_validator'
+
+class AuthTooOldError < StandardError; end
+class NoSecretKeyError < StandardError; end
 
 class App < Roda
   plugin :render
   plugin :head
-
-  # set env to provide the Telegram Bot's secret key
-  #
-  # @return [Boolean]
-  #
-  def validate_auth(data_check_string) 
-    bot_key = ENV['TELEGRAMBOTSECRETKEY']
-    if bot_key
-      digest = OpenSSL::Digest.new('sha256')
-      secret_key = SHA256(bot_key)
-      OpenSSL::HMAC.hexdigest(digest, bot_key, data_check_string) == bot_key
-    else
-      true
-    end
-  end
+  plugin :sessions, secret: ENV.fetch('SESSION_SECRET', SecureRandom.hex(64))
 
   route do |r|
-
     r.root do
-      view("welcome")
+      view('welcome')
     end
 
-    r.on("login") do
+    r.on 'auth' do
+      r.redirect '/login' unless session['tgram']
 
+      r.on 'profile' do
+        @profile = session['tgram']
+        view('profile')
+      end
+    end
+
+    r.on('login') do
       r.is do
         r.get do
           @telegram_login_bot_name = ENV['TELEGRAMBOTNAME']
-          view("login")
+          view('login')
         end
 
         r.post do
           params = JSON.parse(r.body.read)
+          cloned_params = Marshal.load(Marshal.dump(params))
+          auth_status = AuthValidator.new.valid_auth?(cloned_params, BOT_KEY)
+          session[:tgram] = cloned_params
           # README for NEWBIES ;-)
           #
           # inspect the params if you like!
@@ -46,14 +53,13 @@ class App < Roda
           #
           # exit pry by sending `ctrl + d`
           #
-          binding.pry 
+          p "Auth Status: #{auth_status}"
           #
           # do_something(params)
-          r.redirect('/')
+          redirect_to = auth_status ? '/auth/profile' : '/login'
+          { status: auth_status, redirect_to: }.to_json
         end
       end
-
     end
   end
-
 end

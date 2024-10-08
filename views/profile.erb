@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img src="<%= @profile['photo_url'] %>" class="card-img-top" alt="<%= @profile['username'] %> profile picture">
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= "#{@profile['first_name']} #{@profile['last_name']}" %><br>
+      <small><%= "@#{@profile['username']}" %></small>
+    </h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
