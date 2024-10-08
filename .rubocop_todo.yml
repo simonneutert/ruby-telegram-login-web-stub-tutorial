@@ -10,6 +10,5 @@
 # Configuration parameters: AllowedConstants.
 Style/Documentation:
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app.rb'
+    - "spec/**/*"
+    - "test/**/*"

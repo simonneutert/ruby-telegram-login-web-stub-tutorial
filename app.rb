@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rubygems'
+
 require 'bundler/setup'
 Bundler.require(:default)
 
@@ -8,9 +9,9 @@ require 'dotenv/load'
 require 'digest'
 require 'openssl'
 
-BOT_KEY = ENV.delete('TELEGRAMBOTSECRETKEY')
-
 require_relative 'lib/auth_validator'
+
+BOT_KEY = ENV.delete('TELEGRAMBOTSECRETKEY')
 
 class AuthTooOldError < StandardError; end
 class NoSecretKeyError < StandardError; end

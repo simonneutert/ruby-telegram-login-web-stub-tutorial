@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "21:45"
+      time: "21:30"
       timezone: "Europe/Berlin"
     assignees:
       - "simonneutert"
@@ -19,7 +19,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "21:45"
+      time: "21:30"
       timezone: "Europe/Berlin"
     assignees:
       - "simonneutert"

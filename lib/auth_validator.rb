@@ -7,10 +7,11 @@
 #   auth_validator.valid_auth?(params)
 #
 class AuthValidator
-  # set env to provide the Telegram Bot's secret key
+  # Validates the Telegram Bot's secret key
+  # @param [Hash] params The parameters from user after login
+  # @param [String] bot_key The Telegram Bot's secret key
   #
   # @return [Boolean]
-  #
   def valid_auth?(params, bot_key)
     raise NoSecretKeyError, 'No secret key found' unless bot_key
     raise AuthTooOldError, 'Data is outdated' if Time.now.to_i - params['auth_date'] > 86_400

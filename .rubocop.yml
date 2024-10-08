@@ -1,5 +1,4 @@
 inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-rake
   - rubocop-performance
@@ -9,6 +8,6 @@ AllCops:
 
 Metrics/BlockLength:
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app.rb'
+    - "spec/**/*"
+    - "test/**/*"
+    - "app.rb"

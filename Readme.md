@@ -45,4 +45,4 @@ clap your hands and login with telegram!
 * `$ docker run -it --rm -p5555:5555 ruby-telegram-login`
 * open your browser at the given ngrok https:// domain
 
-if you messed up a step above, simply build again, then run again, again, again
+If you messed up a step above, simply build again, then run again, again, again

@@ -3,7 +3,7 @@ FROM ruby:3.3-slim
 WORKDIR /app
 
 RUN gem install bundler
-COPY Gemfile* ./
+COPY Gemfile Gemfile.lock ./
 
 RUN bundle install
 RUN bundle clean --force

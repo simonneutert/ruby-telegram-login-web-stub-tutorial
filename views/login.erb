@@ -2,7 +2,8 @@
 <script type="text/javascript">
   function onTelegramAuth(user) {
     alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    // user data is logged to the browser for easy inspection
+
+   // user data is logged to the browser for easy inspection
     console.log(user);
 
     fetch('/login', {
