@@ -1,0 +1,14 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rake
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.3
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app.rb'
