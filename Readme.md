@@ -33,9 +33,17 @@ Optional:
 Run `$ ruby bot.rb` to start the bot listening for messages. \
 It will echo back the message you sent.
 
-## ngrok Development Server
+## Run this project
 
-### Telegram Bot Setup
+The project requires two parts. \
+One being ngrok as gate to the internet, handing out a domain, telegram will use. \
+The other is the code of this repo a.k.a the backend.
+
+And of course you need to have your bot on telegram ready.
+
+### ngrok Development Server
+
+#### Telegram Bot Setup
 
 * go, see [@BotFather](https://telegram.me/botfather) on telegram
 * create/choose your desired bot (you should have a bot already)
@@ -43,17 +51,17 @@ It will echo back the message you sent.
   * the domain you copied from ngrok (https://....ngrok.io)
 * see what .env.example ships with and create a `.env` (copy of .env.example) edit with your credentials
 
-### Start and keep running an ngrok Development Server
+#### Start and keep running an ngrok Development Server
 
 have ngrok installed and start a server by `$ ngrok http -p 5555` and copy the https url you are given
 
 **Remember** you need to set the domain in the bot settings, each time you restart ngrok!
 
-## Run the app
+### Run the backend
 
 Run it local using (A) Ruby or via (B) Docker.
 
-### A - Ruby
+#### A - Ruby
 
 * clone this repo
 * `$ bundle install`
@@ -62,7 +70,7 @@ Run it local using (A) Ruby or via (B) Docker.
 
 clap your hands and login with telegram!
 
-### B - Docker
+#### B - Docker
 
 ```shell
 # builds the image
@@ -79,7 +87,7 @@ docker run -it --rm -p5555:5555 \
 
 If you messed up a step above, simply build again, then run again, again, again
 
-## Run the "echoing" bot
+### Optional: run the "echoing" bot
 
 ```shell
 $ ruby bot.rb
