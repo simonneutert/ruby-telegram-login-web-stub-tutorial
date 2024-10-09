@@ -1,9 +1,9 @@
 # Telegram Login Ruby Roda Demo
 
-**please, read the official telegram login article**  
+**please, read the official telegram login article** \
 at https://core.telegram.org/widgets/login _(at least skim it!)_
 
-## For those who try it out 👋
+## For those who demo run this code 👋
 
 Hey there, glad you gave this a spin! As this project tries to give other rubyists a hand to get tgram going, it is quite possible, that things might not be as straightforward, as I think they are. 
 
@@ -20,7 +20,20 @@ For running this project locally you need one of the following two:
 
 People using Docker see their own paragraph below.
 
-## Run this project
+## What this does
+
+This is a simple demo of the telegram login widget. \
+You can login using your telegram account. \
+Once logged in successfully, your profile is rendered. \
+The data is stored in a session cookie (not persisted for a longer time). \
+A background job is enqueued to greet via your telegram bot after a few seconds.
+
+Optional:
+
+Run `$ ruby bot.rb` to start the bot listening for messages. \
+It will echo back the message you sent.
+
+## ngrok Development Server
 
 ### Telegram Bot Setup
 
@@ -36,11 +49,11 @@ have ngrok installed and start a server by `$ ngrok http -p 5555` and copy the h
 
 **Remember** you need to set the domain in the bot settings, each time you restart ngrok!
 
-### Run the app
+## Run the app
 
 Run it local using (A) Ruby or via (B) Docker.
 
-#### A - Ruby
+### A - Ruby
 
 * clone this repo
 * `$ bundle install`
@@ -49,7 +62,7 @@ Run it local using (A) Ruby or via (B) Docker.
 
 clap your hands and login with telegram!
 
-#### B - Docker
+### B - Docker
 
 ```shell
 # builds the image
@@ -65,3 +78,10 @@ docker run -it --rm -p5555:5555 \
 * open your browser at the given **ngrok https://** domain
 
 If you messed up a step above, simply build again, then run again, again, again
+
+## Run the "echoing" bot
+
+```shell
+$ ruby bot.rb
+```
+Read/Skim the code to see how it works. [bot.rb](bot.rb)
