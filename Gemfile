@@ -15,4 +15,6 @@ group :development do
   gem 'rubocop', '~> 1.66'
   gem 'rubocop-performance', '~> 1.22'
   gem 'rubocop-rake', '~> 0.6.0'
+  gem 'test-unit', '~> 3.6'
+  gem 'timecop', '~> 0.9.10'
 end

@@ -1,0 +1,24 @@
+name: Ruby
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint_and_test:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 1
+    env:
+      RACK_ENV: test
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Run rake (lint and test)
+        run: ruby test/test_runner.rb
