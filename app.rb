@@ -13,10 +13,7 @@ require_relative 'lib/auth_validator'
 
 BOT_KEY = ENV.delete('TELEGRAMBOTSECRETKEY')
 
-class AuthTooOldError < StandardError; end
-class NoSecretKeyError < StandardError; end
-
-class App < Roda
+class App < Roda # rubocop:disable Style/Documentation
   plugin :render
   plugin :head
   plugin :sessions, secret: ENV.fetch('SESSION_SECRET', SecureRandom.hex(64))

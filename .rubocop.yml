@@ -11,3 +11,9 @@ Metrics/BlockLength:
     - "spec/**/*"
     - "test/**/*"
     - "app.rb"
+
+Metrics/MethodLength:
+  Exclude:
+    - "spec/**/*"
+    - "test/**/*"
+    - "app.rb"
