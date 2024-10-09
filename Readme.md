@@ -51,8 +51,17 @@ clap your hands and login with telegram!
 
 #### B - Docker
 
-* `$ docker build . -t ruby-telegram-login`
-* `$ docker run -it --rm -p5555:5555 -e TELEGRAMBOTNAME='yourBot' -e TELEGRAMBOTSECRETKEY='123:abc-def' -e 'a-super-long-128-char-string' ruby-telegram-login`
-* open your browser at the given ngrok https:// domain
+```shell
+# builds the image
+docker build . -t ruby-telegram-login`
+# run the image with your envs replaced
+docker run -it --rm -p5555:5555 \
+  -e TELEGRAMBOTNAME='yourBot' \
+  -e TELEGRAMBOTSECRETKEY='123:abc-def' \
+  -e 'a-super-long-128-char-string' \
+  ruby-telegram-login
+```
+
+* open your browser at the given **ngrok https://** domain
 
 If you messed up a step above, simply build again, then run again, again, again
