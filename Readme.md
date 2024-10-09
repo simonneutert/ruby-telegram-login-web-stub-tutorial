@@ -38,9 +38,9 @@ have ngrok installed and start a server by `$ ngrok http -p 5555` and copy the h
 
 ### Run the app
 
-Run it local using Ruby or via Docker.
+Run it local using (A) Ruby or via (B) Docker.
 
-#### A Ruby
+#### A - Ruby
 
 * clone this repo
 * `$ bundle install`
@@ -49,7 +49,7 @@ Run it local using Ruby or via Docker.
 
 clap your hands and login with telegram!
 
-#### B Docker
+#### B - Docker
 
 * `$ docker build . -t ruby-telegram-login`
 * `$ docker run -it --rm -p5555:5555 -e TELEGRAMBOTNAME='yourBot' -e TELEGRAMBOTSECRETKEY='123:abc-def' -e 'a-super-long-128-char-string' ruby-telegram-login`
