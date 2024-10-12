@@ -83,7 +83,7 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.9.2)
-    roda (3.84.0)
+    roda (3.85.0)
       rack
     rubocop (1.66.1)
       json (~> 2.3)
@@ -130,7 +130,7 @@ DEPENDENCIES
   puma (~> 6.4)
   rackup (~> 2.1)
   rake (~> 13.2)
-  roda (~> 3.84)
+  roda (~> 3.85)
   rubocop (~> 1.66)
   rubocop-performance (~> 1.22)
   rubocop-rake (~> 0.6.0)
