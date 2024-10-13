@@ -105,7 +105,7 @@ GEM
     ruby-progressbar (1.13.0)
     sucker_punch (3.2.0)
       concurrent-ruby (~> 1.0)
-    telegram-bot-ruby (1.0.0)
+    telegram-bot-ruby (2.0.0)
       dry-struct (~> 1.6)
       faraday (~> 2.0)
       faraday-multipart (~> 1.0)
@@ -117,7 +117,7 @@ GEM
     unicode-display_width (2.6.0)
     uri (0.13.1)
     webrick (1.8.2)
-    zeitwerk (2.6.18)
+    zeitwerk (2.7.0)
 
 PLATFORMS
   ruby
@@ -135,7 +135,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.22)
   rubocop-rake (~> 0.6.0)
   sucker_punch (~> 3.0)
-  telegram-bot-ruby (~> 1.0)
+  telegram-bot-ruby (~> 2.0)
   test-unit (~> 3.6)
   tilt (~> 2.4)
   timecop (~> 0.9.10)

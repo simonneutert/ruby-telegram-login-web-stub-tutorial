@@ -9,7 +9,7 @@ gem 'rackup', '~> 2.1'
 gem 'rake', '~> 13.2'
 gem 'roda', '~> 3.85'
 gem 'sucker_punch', '~> 3.0'
-gem 'telegram-bot-ruby', '~> 1.0'
+gem 'telegram-bot-ruby', '~> 2.0'
 gem 'tilt', '~> 2.4'
 
 group :development do
