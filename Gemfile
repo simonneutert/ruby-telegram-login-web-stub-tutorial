@@ -14,7 +14,7 @@ gem 'tilt', '~> 2.4'
 
 group :development do
   gem 'pry'
-  gem 'rubocop', '~> 1.66'
+  gem 'rubocop', '~> 1.67'
   gem 'rubocop-performance', '~> 1.22'
   gem 'rubocop-rake', '~> 0.6.0'
   gem 'test-unit', '~> 3.6'
