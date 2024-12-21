@@ -7,10 +7,10 @@ gem 'http', '~> 5.2'
 gem 'puma', '~> 6.5'
 gem 'rackup', '~> 2.2'
 gem 'rake', '~> 13.2'
-gem 'roda', '~> 3.86'
+gem 'roda', '~> 3.87'
 gem 'sucker_punch', '~> 3.0'
 gem 'telegram-bot-ruby', '~> 2.2'
-gem 'tilt', '~> 2.4'
+gem 'tilt', '~> 2.5'
 
 group :development do
   gem 'pry'
