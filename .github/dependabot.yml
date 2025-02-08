@@ -4,8 +4,8 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "monthly"
+      day: "wednesday"
       time: "21:30"
       timezone: "Europe/Berlin"
     assignees:
@@ -17,8 +17,8 @@ updates:
       patch-and-minor-dependencies:
         update-types: ["patch", "minor"]
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "monthly"
+      day: "wednesday"
       time: "21:30"
       timezone: "Europe/Berlin"
     assignees:
