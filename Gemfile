@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'dotenv', '~> 3.1'
 gem 'http', '~> 5.3'
-gem 'puma', '~> 6.6'
+gem 'puma', '~> 7.0'
 gem 'rackup', '~> 2.2'
 gem 'rake', '~> 13.3'
 gem 'roda', '~> 3.95'
