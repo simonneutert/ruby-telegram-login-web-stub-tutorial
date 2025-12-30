@@ -122,7 +122,7 @@ GEM
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.1.0)
-    uri (1.0.3)
+    uri (1.0.4)
     zeitwerk (2.7.2)
 
 PLATFORMS
