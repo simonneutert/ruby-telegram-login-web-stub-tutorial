@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv', '~> 3.2'
-gem 'http', '~> 5.3'
+gem 'http', '~> 6.0'
 gem 'puma', '~> 7.2'
 gem 'rackup', '~> 2.3'
 gem 'rake', '~> 13.3'
