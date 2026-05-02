@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv', '~> 3.2'
-gem 'puma', '~> 7.2'
+gem 'puma', '~> 8.0'
 gem 'rackup', '~> 2.3'
 gem 'rake', '~> 13.4'
 gem 'roda', '~> 3.103'
