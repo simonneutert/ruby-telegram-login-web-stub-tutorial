@@ -6,10 +6,10 @@ gem 'dotenv', '~> 3.2'
 gem 'puma', '~> 8.0'
 gem 'rackup', '~> 2.3'
 gem 'rake', '~> 13.4'
-gem 'roda', '~> 3.105'
+gem 'roda', '~> 3.106'
 gem 'sucker_punch', '~> 3.3'
-gem 'telegram-bot-ruby', '~> 2.7'
-gem 'tilt', '~> 2.7'
+gem 'telegram-bot-ruby', '~> 2.8'
+gem 'tilt', '~> 2.8'
 
 group :development do
   gem 'pry'
