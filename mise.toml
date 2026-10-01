@@ -1,0 +1,6 @@
+[tools]
+ruby = "4"
+
+[tasks.test]
+description = "Run tests"
+run = "ruby test/test_runner.rb"
